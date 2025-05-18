@@ -1,9 +1,4 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-// Get the directory name of the current module
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -19,10 +14,10 @@ const nextConfig = {
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@': path.resolve(__dirname, './')
+      '@': path.resolve(__dirname, './'),
     };
     return config;
-  }
-}
+  },
+};
 
-export default nextConfig
+module.exports = nextConfig;

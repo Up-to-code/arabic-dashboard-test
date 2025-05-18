@@ -1,11 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm install --legacy-peer-deps && npm install --legacy-peer-deps tailwindcss postcss autoprefixer && NODE_OPTIONS='--max-old-space-size=4096' next build",
+  "buildCommand": "npm install --legacy-peer-deps && npm install --legacy-peer-deps tailwindcss postcss autoprefixer babel-plugin-module-resolver && NODE_OPTIONS='--max-old-space-size=4096' next build",
   "installCommand": "npm install --legacy-peer-deps",
   "framework": "nextjs",
-  "outputDirectory": ".next",
-  "env": {
-    "NODE_ENV": "production",
-    "NEXT_PUBLIC_BASE_PATH": ""
-  }
+  "outputDirectory": ".next"
 }

@@ -10,5 +10,20 @@
         }
       }
     ]
-  ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "module-resolver",
+          {
+            "root": ["./"],
+            "alias": {
+              "@": "./"
+            }
+          }
+        ]
+      ]
+    }
+  }
 }
